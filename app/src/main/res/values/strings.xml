@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AppAdivinaNumero</string>
+    <string name="enunciado">He pensado un número entre 1 y 100, ¡Adivínalo!</string>
+    <string name="adivina">¡Adivina!</string>
+    <string name="botonAdivinar">Probar</string>
+    <string name="mayor">¡Incorrecto! El número que he pensado es mayor que %d$num</string>
+    <string name="menor">¡Incorrecto! El número que he pensado es menor que %d$num</string>
+    <string name="correcto">¡Correcto! El número que había pensado era %d$num</string>
+    <string name="nuevoJuego">Juega otra vez</string>
 </resources>
