@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,34 +8,70 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/enunciado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="44dp" />
+        android:layout_width="358dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/enunciado"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-
-        />
+    <TextView
+        android:id="@+id/salida"
+        android:layout_width="331dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="184dp"
+        android:text="@string/correcto"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enunciado" />
 
     <TextView
         android:id="@+id/adivina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="563dp" />
+        android:layout_marginTop="152dp"
+        android:text="@string/adivina"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/entrada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salida" />
+
+    <EditText
+        android:id="@+id/entrada"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="152dp"
+        android:inputType="text"
+        android:autofillHints="Numero"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/adivina"
+        app:layout_constraintTop_toBottomOf="@+id/salida"
+        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/botonAdivinar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="637dp" />
+        android:layout_width="226dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/main"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onClickAdivinar"
+        android:text="@string/botonAdivinar"
+        android:textSize="24sp"
+        app:cornerRadius="@dimen/cardview_default_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
