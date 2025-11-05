@@ -11,13 +11,15 @@
 
     <TextView
         android:id="@+id/enunciado"
-        android:layout_width="358dp"
-        android:layout_height="53dp"
+        android:layout_width="380dp"
+        android:layout_height="71dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:text="@string/enunciado"
-        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +29,6 @@
         android:layout_width="331dp"
         android:layout_height="152dp"
         android:layout_marginTop="184dp"
-        android:text="@string/correcto"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,20 +39,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="152dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/adivina"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonAdivinar"
         app:layout_constraintEnd_toStartOf="@+id/entrada"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/salida" />
 
     <EditText
         android:id="@+id/entrada"
-        android:layout_width="43dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="152dp"
-        android:inputType="text"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginBottom="10dp"
         android:autofillHints="Numero"
+        android:inputType="number"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonAdivinar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/adivina"
         app:layout_constraintTop_toBottomOf="@+id/salida"
@@ -65,13 +70,39 @@
         android:backgroundTint="@color/main"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="onClickAdivinar"
         android:text="@string/botonAdivinar"
         android:textSize="24sp"
         app:cornerRadius="@dimen/cardview_default_elevation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/botonReiniciar"
+        android:layout_width="226dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="@color/main"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/nuevoJuego"
+        android:textSize="24sp"
+        app:cornerRadius="@dimen/cardview_default_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/intentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enunciado" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
